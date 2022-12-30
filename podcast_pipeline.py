@@ -66,7 +66,7 @@ def podcast_pipeline():
         for episode in episodes:
             filename = f"{episode['link'].split('/')[-1]}.mp3"
             audio_path = os.path.join(
-                "/mnt/c/Users/nguye/etl_spotify/download_podcasts", filename)
+                "/mnt/YOUR_PATH/download_podcasts", filename) #If you run the program on Linux, you must add the path /mnt /
             if not os.path.exists(audio_path):
                 print(f"Downloading {filename}")
                 audio = requests.get(episode["enclosure"]["@url"])
